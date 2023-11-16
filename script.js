@@ -74,17 +74,17 @@ function inTyping(){
 
     if(typeChar==null){
         charIndex--;
-       if( characters[charIndex].classList.contains("incorrect")){
+       if( characters[charIndex].classList.contains("incorrectWords")){
         misTakes--;
        }
-        characters[charIndex].classList.remove("correct","incorrect");
+        characters[charIndex].classList.remove("correctWords","incorrectWords");
     }else{
         if(characters[charIndex].innerText ===typeChar){
-            characters[charIndex].classList.add("correct");
+            characters[charIndex].classList.add("correctWords");
         }else{
             misTakes++;
             // console.log(misTakes);
-            characters[charIndex].classList.add("incorrect");
+            characters[charIndex].classList.add("incorrectWords");
         }
         charIndex++;
     }
